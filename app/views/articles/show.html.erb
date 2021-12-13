@@ -1,0 +1,19 @@
+<div class="article-action center-content">
+  <h3><%= @article.title %></h3>
+
+  <p class="edit-btn">
+    <%= link_to edit_article_path do %>
+    <i class="fas fa-edit"></i>
+    <% end %>
+  </p>
+
+  <p class="delete-btn" >
+    <%= link_to article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" } do %>
+  <i class="far fa-trash-alt"></i>
+  <% end %>
+  </p>
+</div>
+
+<p class="center-content"><%= @article.content %></p>

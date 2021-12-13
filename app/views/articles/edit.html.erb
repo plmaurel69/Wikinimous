@@ -1,0 +1,19 @@
+<div class="center-content">
+  <h2>Editing Article</h2>
+
+  <%= form_for(@article) do |f| %>
+  <div>
+    Title: <%= f.text_field :title %><br />
+  </div>
+  <div>
+    Content : <%= f.text_field :content %><br />
+  </div>
+  <%= f.submit %>
+  <% end %>
+
+<div class="box">
+  <p class="show"><%= link_to "Show", article_path %></p>
+  <p>|</p>
+  <p class="back"><%= link_to "Back", articles_path %></p>
+</div>
+</div>
